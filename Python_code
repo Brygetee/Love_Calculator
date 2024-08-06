@@ -1,0 +1,25 @@
+def calculate_love_score():
+    name_1 = input("Input a name: ").upper()
+    name_2 = input("Input another name: ").upper()
+    combined_name = name_1 + name_2
+    # check for #of times true occurs
+    true = ["T", "R", "U", "E"]
+    true_number = 0
+    for i in combined_name:
+        if i in true:
+            true_number += 1
+    # print(true_number)
+    
+    # check for #of times love occurs
+    love = ["L", "O", "V", "E"]
+    love_number = 0
+    for i in combined_name:
+        if i in love:
+            love_number += 1
+    # print(love_number)
+      
+    # combine both numbers for love score
+    Love_score = str(true_number) + str(love_number)
+    print(f"Your love score is: {Love_score} out of 100.")
+    
+calculate_love_score()
